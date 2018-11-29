@@ -1,8 +1,10 @@
+# -*- coding:utf-8 -*-
+'''
 丿灬安之若死阅读数：3873
 版权声明：独学而无友，则孤陋寡闻。q群582951247
 https://blog.csdn.net/mp624183768/article/details/79392030
+'''
 
-# coding:utf8
 import os;
 def reset():
     i = 0
