@@ -15,15 +15,14 @@ with open('clean_title.txt') as wf,open("word.txt",'w') as wf2: #打开文件
                     word_dict[item2] += 1
 #key：分词
 #value:个数
-'''
-      mylist=sorted(word_dict.items(),key = lambda x:x[1],reverse = True)
-      print (join(mylist))
-    '''
+mylist=sorted(word_dict.items(),key = lambda x:x[1],reverse = True)
+print (mylist)
+
 #小于的滤出
 wf2=open('./word.txt','w+')
 for key in word_dict:
     if word_dict[key]>10:
-        print key,word_dict[key]
+        print(key,word_dict[key])
         wf2.write(key+' '+str(word_dict[key])+'\n') #写入文档
 '''
 
