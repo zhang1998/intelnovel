@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# coding=utf-8
 from tools.tokenizer.wordCut import WordCut
 mydict = ["mysenicdict.txt", "myfooddict.txt"]
 file_path = '/home/zcy/haiNan/texttravelgen/data/clean_comments.txt' # 默认是精确模式
@@ -12,7 +14,7 @@ transformer = TfidfTransformer()
 freq_word_matrix = vectorizer.fit_transform(corpus) #获取词袋模型中的所有词语
 word = vectorizer.get_feature_names()
 tfidf = transformer.fit_transform(freq_word_matrix) # 元素w[i][j]表示j词在i类文本中的tf-idf权重
-weight = tfidf.toarray()z
+weight = tfidf.toarray()
 
 
 # doc2vec #训练并保存模型

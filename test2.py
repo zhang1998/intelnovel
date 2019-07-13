@@ -17,14 +17,30 @@ with open('clean_title.txt') as wf,open("word.txt",'w') as wf2: #打开文件
 #value:个数
 mylist=sorted(word_dict.items(),key = lambda x:x[1],reverse = True)
 print (mylist)
-
 #小于的滤出
 wf2=open('./word.txt','w+')
 for key in word_dict:
-    if word_dict[key]>10:
+    if word_dict[key]>=1000:
         print(key,word_dict[key])
         wf2.write(key+' '+str(word_dict[key])+'\n') #写入文档
-'''
+
+
+for key in word_dict:
+    if word_dict[key]>=100 and  word_dict[key]<1000:
+        print(key,word_dict[key])
+        wf2.write(key+' '+str(word_dict[key])+'\n') #写入文档
+
+
+for key in word_dict:
+    if word_dict[key]>40 and word_dict[key]<100:
+        print(key,word_dict[key])
+        wf2.write(key+' '+str(word_dict[key])+'\n') #写入文档
+
+for key in word_dict:
+    if word_dict[key]>10 and word_dict[key]<=40:
+        print(key,word_dict[key])
+        wf2.write(key+' '+str(word_dict[key])+'\n') #写入文档
+        '''
 
 
 

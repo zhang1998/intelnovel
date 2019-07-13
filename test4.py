@@ -1,5 +1,5 @@
 def wordcount(str):
-    # 文章字符串前期处理
+    # 文章字符串前期理处
     strl_ist = str.replace('\n', '').lower().split(' ')
     count_dict = {}
     # 如果字典里有该单词则加1，否则添加入字典
